@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Vue-router / JS</title>
+</head>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<div id="app">
+	<h1>Hello App!</h1>
+	<p>
+		<!-- use router-link component for navigation. -->
+		<!-- specify the link by passing the `to` prop. -->
+		<!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+		<router-link to="/foo">Go to Foo</router-link>
+		
+		<router-link to="/bar">Go to Bar</router-link>
+		
+		<router-link to="/post/foo">post/foo</router-link>
+
+		<router-link to="/post/foo/archived">post/foo/archived</router-link>
+
+		<router-link to="/post/foo/visited">post/foo/visited</router-link>
+
+
+		<!-- named routes -->
+
+		<router-link :to="{ name : 'contact' } ">Contact Me</router-link>
+
+		<router-link :to="{ name : 'user', params : { id : 3 }} ">User</router-link>
+
+		<!-- Named Views -->
+
+		<router-view class="view one"></router-view>
+		<router-view class="view two" name="a"></router-view>
+		<router-view class="view three" name="b"></router-view>
+
+
+
+	</p>
+
+	<!-- route outlet -->
+	<!-- component matched by the route will render here -->
+	<router-view class="view"></router-view>
+
+
+
+</div>
+
+<script src="./scripts.js"></script>
+</body>	
+</html>
