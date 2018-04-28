@@ -29,19 +29,22 @@
 
 		<router-link :to="{ name : 'user', params : { id : 3 }} ">User</router-link>
 
+
+		<router-link to="/other1">/other1</router-link>
+		<router-link to="/other2">/other2</router-link>
 		<!-- Named Views -->
 
+		<!-- route outlet <--></-->
+
+		
+		<!-- component matched by the route will render here -->
 		<router-view class="view one"></router-view>
 		<router-view class="view two" name="a"></router-view>
 		<router-view class="view three" name="b"></router-view>
 
 
-
 	</p>
 
-	<!-- route outlet -->
-	<!-- component matched by the route will render here -->
-	<router-view class="view"></router-view>
 
 
 

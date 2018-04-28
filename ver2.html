@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<style>
+	.us {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"header header"
+		"nav content"
+		"nav helper"
+		;
+	}
+
+	h2 {
+		grid-area: header;
+	}
+
+	.us__nav {
+		grid-area: nav;
+		border: 1px dotted;
+		margin-right: .75rem;
+		padding: .3rem;
+	}
+	.us__content {
+		grid-area: content;
+	}
+	.us__content--helper {
+		grid-area: helper;
+	}
+</style>
+<body>
+
+
+	<div id="app">
+		<h1>Nested Named Views</h1>
+		<router-view></router-view>
+	</div>
+
+
+
+
+
+	<script src="script2.js"></script>
+</body>
+</html>

@@ -45,7 +45,10 @@ const User =  {
 	template : `<div>This is User {{ $route.params.id }} </div>`
 }
 
+const Baz =  { 
 
+	template : `<div>Baz </div>`
+}
 
 
 // 2. Define some routes
@@ -73,12 +76,10 @@ const routes = [
 	{
 		path : 'archived', component : ArchivedPosts, 
 	},
-
 	{
 		path : 'visited', component : VisitedPosts, 
 
 	}
-
 	]
 }, 
 
@@ -91,7 +92,7 @@ const routes = [
 } ,
 
 {
-	path : 'contact' , 
+	path : '/contact' , 
 	name : 'contact',
 	component : Contact
 },
@@ -99,15 +100,31 @@ const routes = [
 
 
 
-/** Named Views **/
+
+
+/** 
+
+scripts for ver2 
+
+Starts with named views 
+
+https://router.vuejs.org/en/essentials/named-views.html
+**/
 
 {
-	path: '/',
+	path: '/other1',
 	components: 
 	{
 		default: Foo,
 		a: Bar,
 		b: Baz
+	},
+
+	path : '/other2',
+	components: {
+		default: Baz,
+		a: Bar,
+		b: Foo
 	}
 }
 
